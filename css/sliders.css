@@ -1,0 +1,103 @@
+/* Auto-scrolling sliders with hover pause */
+
+/* Common slider styles */
+.auto-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    animation: scrollSlider 30s linear infinite;
+}
+
+.slider-container:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollSlider {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% / 2));
+    }
+}
+
+/* Languages & Frameworks slider */
+.languages-slider .slider-container {
+    gap: 20px;
+    padding: 10px 0;
+}
+
+/* Tools & Platforms slider */
+.tools-slider .slider-container {
+    gap: 20px;
+    padding: 10px 0;
+}
+
+/* Social Links slider */
+.social-slider .slider-container {
+    gap: 15px;
+    padding: 10px 0;
+}
+
+/* Slider items */
+.slider-item {
+    flex: 0 0 auto;
+    background: rgba(30, 30, 30, 0.6);
+    border-radius: 10px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 120px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(80, 80, 80, 0.3);
+    transition: all 0.3s ease;
+}
+
+.slider-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, rgba(67, 97, 238, 0.2), rgba(114, 9, 183, 0.2), rgba(247, 37, 133, 0.2));
+    border: 1px solid rgba(114, 9, 183, 0.5);
+}
+
+.slider-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.slider-item span {
+    font-weight: 500;
+}
+
+/* Gradient fade effect on edges */
+.auto-slider::before,
+.auto-slider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+}
+
+.auto-slider::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-color), transparent);
+}
+
+.auto-slider::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-color), transparent);
+}

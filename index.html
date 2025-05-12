@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaitanya Kashyap | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sliders.css">
+    <link rel="stylesheet" href="css/back-to-top.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+<body class="dark-theme">
+    <!-- Modern Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="navbar-logo">CK</div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="#home" class="navbar-link active">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#about" class="navbar-link">About</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#skills" class="navbar-link">Skills</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#projects" class="navbar-link">Projects</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#designs" class="navbar-link">Designs</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#achievements" class="navbar-link">Achievements</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#contact" class="navbar-link">Contact</a>
+                </li>
+            </ul>
+            <div class="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="animated-text">Chaitanya Kashyap</h1>
+                    <div class="title-container">
+                        <h2><span class="highlight">Designer</span> and <span class="highlight">Developer</span></h2>
+                    </div>
+                    <div class="hero-tagline">
+                        <span class="tag-item"><i class="fas fa-laptop-code"></i> IT by passion</span>
+                        <span class="tag-item"><i class="fas fa-gamepad"></i> Esports enthusiast</span>
+                        <span class="tag-item"><i class="fas fa-palette"></i> Designer by craft</span>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn primary-btn"><i class="fas fa-envelope"></i> Contact Me</a>
+                        <a href="https://drive.google.com/file/d/1GVOU7FI8N5y84qwY4Qy_QM_b_Mc_9sdb/view?usp=drive_link" target="_blank" class="btn secondary-btn"><i class="fas fa-download"></i> Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-intro">
+                        <p>I'm a <span class="highlight">technology enthusiast</span> with a <span class="highlight">passion for cybersecurity</span>, software development, and networking. I thrive in fast-paced, problem-solving environments, with hands-on experience in network security, full-stack development, and ethical hacking.</p>
+                        <p>From securing systems to competing in Mortal Kombat tournaments, I love applying my skills in both professional and creative arenas.</p>
+                    </div>
+                    <div class="about-details">
+                        <div class="detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Calgary, AB <small>(Open for relocation)</small></span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Lead Developer & CTO at Zephyrium Inc.</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-search"></i>
+                            <span>Seeking Opportunities: Networking, Cybersecurity, Technical Analyst, or Administrative roles</span>
+                        </div>
+                    </div>
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"I am scared of knowing too little and a little too much."</p>
+                        <span>- Blatant</span>
+                    </div>
+                </div>
+                <div class="about-profile">
+                    <div class="profile-image active" id="vector-image">
+                        <div class="gradient-glow"></div>
+                        <img src="images/vector(no-bg).png" alt="Chaitanya Kashyap - Vector Illustration" onclick="switchImages()">
+                    </div>
+                    <div class="real-photo" id="real-photo">
+                        <div class="gradient-glow"></div>
+                        <img src="images/ME.jpg" alt="Chaitanya Kashyap" onclick="switchImages()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Languages & Frameworks</h3>
+                    <div class="auto-slider languages-slider">
+                        <div class="slider-container">
+                            <!-- First set of items -->
+                            <div class="slider-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fab fa-node-js"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fab fa-rust"></i>
+                                <span>Rust</span>
+                            </div>
+                            <!-- Duplicate set for continuous scrolling -->
+                            <div class="slider-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fab fa-node-js"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fab fa-rust"></i>
+                                <span>Rust</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="auto-slider tools-slider">
+                        <div class="slider-container">
+                            <!-- First set of items -->
+                            <div class="slider-item">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fab fa-docker"></i>
+                                <span>Docker</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fab fa-aws"></i>
+                                <span>AWS</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fas fa-network-wired"></i>
+                                <span>Networking</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cybersecurity</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fas fa-terminal"></i>
+                                <span>CLI</span>
+                            </div>
+                            <!-- Duplicate set for continuous scrolling -->
+                            <div class="slider-item">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fab fa-docker"></i>
+                                <span>Docker</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fab fa-aws"></i>
+                                <span>AWS</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fas fa-network-wired"></i>
+                                <span>Networking</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cybersecurity</span>
+                            </div>
+                            <div class="slider-item">
+                                <i class="fas fa-terminal"></i>
+                                <span>CLI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/brute-force-attack.png" alt="Password BruteForcer Simulation">
+                    </div>
+                    <div class="project-content">
+                        <h3>Password BruteForcer Simulation</h3>
+                        <p>A JavaScript tool that simulates brute-force and dictionary attacks to test password strength.</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>Security</span>
+                            <span>Web</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/blatant-striker/Password-BruteForcer-Simulation" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Quello Buono.png" alt="Quello Buono Italian Restaurant">
+                    </div>
+                    <div class="project-content">
+                        <h3>Quello Buono - Italian Restaurant</h3>
+                        <p>A sleek, minimalist showcase website for Quello Buono Italian restaurant, designed to demonstrate modern web development skills.</p>
+                        <div class="project-tags">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>Web Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/blatant-striker/Quello-Buono---Italian-Restaurant" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/swimsite.png" alt="Swim Team Site">
+                    </div>
+                    <div class="project-content">
+                        <h3>Swim Team Site</h3>
+                        <p>A website for a swim team, showcasing team members, events, and achievements.</p>
+                        <div class="project-tags">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>Web Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/blatant-striker/Swim-Team-Site" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Designs Section -->
+    <section id="designs" class="designs">
+        <div class="container">
+            <h2 class="section-title">Graphic Designs</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- All images from the images folder -->
+                     
+                    <div class="swiper-slide"><img src="images/20250511195135.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/20250511195144.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/20250511195154.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/20250511195212.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/20250511195220.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/20250511195231.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/20250511195241.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/20250511195309.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479367.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479397.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479428.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479460.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479491.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479516.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479542.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479569.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479598.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479622.jpg" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479647.jpg" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479727.webp" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479750.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479774.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479798.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479821.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479844.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479868.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479891.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479915.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479938.jpg" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479961.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479991.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943480014.jpg" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943480038.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943480061.jpg" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943480085.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943480108.jpg" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943480132.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943480155.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943480178.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943480201.jpg" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943480225.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479673.jpg" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479701.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479197.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479223.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479246.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479269.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479299.png" alt="Design Work"></div>
+                    <div class="swiper-slide"><img src="images/1746943479330.png" alt="Design Work"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div class="design-description">
+                <p>A showcase of my graphic design work and 3D renders. The video below is a 3D render for a business card I created.</p>
+                <div class="design-video">
+                    <video autoplay loop muted>
+                        <source src="images/VID_20250511_190218.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements & Interests</h2>
+            <div class="achievements-container">
+                <div class="achievements-column">
+                    <h3>Certifications</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                            <div class="cert-details">
+                                <h4>Cisco Certified Network Associate (CCNA)</h4>
+                                <p>Issued Sep 2023</p>
+                                <a href="https://www.credly.com/users/chaitanya-kashyap.6025dea7/" target="_blank">View Credential</a>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="cert-details">
+                                <h4>Certified Ethical Hacker (CEH)</h4>
+                                <p>Issued Feb 2024</p>
+                                <a href="https://www.credly.com/users/chaitanya-kashyap.6025dea7/" target="_blank">View Credential</a>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon"><i class="fas fa-laptop-code"></i></div>
+                            <div class="cert-details">
+                                <h4>Endpoint Security</h4>
+                                <p>Issued June 2024</p>
+                                <a href="https://www.credly.com/users/chaitanya-kashyap.6025dea7/" target="_blank">View Credential</a>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon"><i class="fas fa-lock"></i></div>
+                            <div class="cert-details">
+                                <h4>Introduction to Cybersecurity</h4>
+                                <p>Issued July 2024</p>
+                                <a href="https://www.credly.com/users/chaitanya-kashyap.6025dea7/" target="_blank">View Credential</a>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
+                            <div class="cert-details">
+                                <h4>Networking Academy Learn-A-Thon</h4>
+                                <p>Issued Feb 2024</p>
+                                <a href="https://www.credly.com/users/chaitanya-kashyap.6025dea7/" target="_blank">View Credential</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievements-column">
+                    <h3>Hobbies & Interests</h3>
+                    <div class="hobbies-list">
+                        <div class="hobby-item">
+                            <div class="hobby-icon"><i class="fas fa-gamepad"></i></div>
+                            <div class="hobby-details">
+                                <h4>Mortal Kombat Champion</h4>
+                                <p>Competing in Mortal Kombat tournaments internationally</p>
+                            </div>
+                        </div>
+                        <div class="hobby-item">
+                            <div class="hobby-icon"><i class="fas fa-desktop"></i></div>
+                            <div class="hobby-details">
+                                <h4>PC Builder</h4>
+                                <p>Building and optimizing custom Gaming PCs</p>
+                            </div>
+                        </div>
+                        <div class="hobby-item">
+                            <div class="hobby-icon"><i class="fas fa-flag"></i></div>
+                            <div class="hobby-details">
+                                <h4>CTF Enthusiast</h4>
+                                <p>Participating in Cybersecurity Hackathons and CTF challenges</p>
+                            </div>
+                        </div>
+                        <div class="hobby-item">
+                            <div class="hobby-icon"><i class="fas fa-robot"></i></div>
+                            <div class="hobby-details">
+                                <h4>Robotics Designer</h4>
+                                <p>Designing robotics and contributing to Nexus Esports Broadcasting</p>
+                            </div>
+                        </div>
+                        <div class="hobby-item">
+                            <div class="hobby-icon"><i class="fas fa-trophy"></i></div>
+                            <div class="hobby-details">
+                                <h4>Esports Team Member</h4>
+                                <p>Member of the St. Clair College Esports team</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Connect With Me</h2>
+            <div class="contact-wrapper">
+                <div class="contact-left">
+                    <div class="contact-card">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email</h3>
+                            <p>contact@chaitanyakashyap.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <h3>Phone</h3>
+                            <p>+1 519-816-0922</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Location</h3>
+                            <p>Calgary, AB, Canada</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <h3>Find Me Online</h3>
+                    <div class="auto-slider social-slider">
+                        <div class="slider-container">
+                            <!-- First set of items -->
+                            <a href="https://www.linkedin.com/in/chaitanya-kashyap-7079b2239/" target="_blank" class="slider-item">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/blatant-striker" target="_blank" class="slider-item">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://instagram.com/nerdy.artist_" target="_blank" class="slider-item">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://www.youtube.com/@blatantstriker" target="_blank" class="slider-item">
+                                <i class="fab fa-youtube"></i>
+                                <span>YouTube</span>
+                            </a>
+                            <a href="https://wa.me/15198160922" target="_blank" class="slider-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="https://leetcode.com/blatant-striker/" target="_blank" class="slider-item">
+                                <i class="fas fa-code"></i>
+                                <span>LeetCode</span>
+                            </a>
+                            <a href="https://app.hackthebox.com/profile/1493683" target="_blank" class="slider-item">
+                                <i class="fas fa-box"></i>
+                                <span>Hack The Box</span>
+                            </a>
+                            <a href="https://credly.com/users/chaitanya-kashyap" target="_blank" class="slider-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>Credly</span>
+                            </a>
+                            <!-- Duplicate set for continuous scrolling -->
+                            <a href="https://www.linkedin.com/in/chaitanya-kashyap-7079b2239/" target="_blank" class="slider-item">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/blatant-striker" target="_blank" class="slider-item">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://instagram.com/nerdy.artist_" target="_blank" class="slider-item">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://www.youtube.com/@blatantstriker" target="_blank" class="slider-item">
+                                <i class="fab fa-youtube"></i>
+                                <span>YouTube</span>
+                            </a>
+                            <a href="https://wa.me/15198160922" target="_blank" class="slider-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="https://leetcode.com/blatant-striker/" target="_blank" class="slider-item">
+                                <i class="fas fa-code"></i>
+                                <span>LeetCode</span>
+                            </a>
+                            <a href="https://app.hackthebox.com/profile/1493683" target="_blank" class="slider-item">
+                                <i class="fas fa-box"></i>
+                                <span>Hack The Box</span>
+                            </a>
+                            <a href="https://credly.com/users/chaitanya-kashyap" target="_blank" class="slider-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>Credly</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">CK</div>
+                <p>&copy; 2025 Chaitanya Kashyap. All Rights Reserved.</p>
+                <a href="https://drive.google.com/file/d/1GVOU7FI8N5y84qwY4Qy_QM_b_Mc_9sdb/view" target="_blank" class="resume-link">View My Resume</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
