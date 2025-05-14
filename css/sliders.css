@@ -61,6 +61,13 @@
     transition: all 0.3s ease;
 }
 
+/* Light mode adjustments */
+body:not(.dark-theme) .slider-item {
+    background: rgba(200, 200, 200, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(180, 180, 180, 0.5);
+}
+
 .slider-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -79,6 +86,11 @@
 
 .slider-item span {
     font-weight: 500;
+}
+
+/* Ensure text is visible in light mode */
+body:not(.dark-theme) .slider-item span {
+    color: var(--dark-color);
 }
 
 /* Gradient fade effect on edges */
