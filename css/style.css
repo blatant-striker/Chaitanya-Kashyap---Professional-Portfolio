@@ -1072,7 +1072,18 @@ nav {
 .design-video video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+}
+
+/* Responsive styling for the video on mobile */
+@media screen and (max-width: 800px) {
+    .design-video {
+        height: 300px;
+    }
+    
+    .design-video video {
+        object-fit: contain;
+    }
 }
 
 /* Achievements Section */

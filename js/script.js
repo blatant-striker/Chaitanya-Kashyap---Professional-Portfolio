@@ -227,10 +227,48 @@ const initSocialLinks = () => {
 window.addEventListener('scroll', animateOnScroll);
 
 // Initialize everything on page load
-window.addEventListener('load', () => {
-    animateOnScroll();
+document.addEventListener('DOMContentLoaded', function() {
+    // Theme Toggle Functionality
+    const desktopThemeToggle = document.getElementById('desktopThemeToggle');
+    const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+    
+    // Set initial state of the switch based on current theme
+    if (mobileThemeToggle) {
+        mobileThemeToggle.checked = document.body.classList.contains('dark-theme');
+    }
+    
+    function toggleTheme() {
+        document.body.classList.toggle('dark-theme');
+        
+        // Update the toggle icon
+        const isDarkTheme = document.body.classList.contains('dark-theme');
+        const icon = desktopThemeToggle.querySelector('i');
+        
+        if (isDarkTheme) {
+            icon.className = 'fas fa-moon';
+            if (mobileThemeToggle && !mobileThemeToggle.checked) {
+                mobileThemeToggle.checked = true;
+            }
+        } else {
+            icon.className = 'fas fa-sun';
+            if (mobileThemeToggle && mobileThemeToggle.checked) {
+                mobileThemeToggle.checked = false;
+            }
+        }
+    }
+    
+    // Add click event listener to desktop toggle
+    if (desktopThemeToggle) {
+        desktopThemeToggle.addEventListener('click', toggleTheme);
+    }
+    
+    // Add change event listener to mobile toggle switch
+    if (mobileThemeToggle) {
+        mobileThemeToggle.addEventListener('change', toggleTheme);
+    }
     initSwiper();
     animateProjectCards();
+    animateOnScroll();
     handleVideoPlayback();
     initSocialLinks();
     
