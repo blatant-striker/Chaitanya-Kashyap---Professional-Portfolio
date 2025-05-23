@@ -24,8 +24,8 @@
     --light-color: #f8f9fa;
     --dark-color: #e9ecef;
     --gray-color: #adb5bd;
-    --bg-color: #121212;
-    --card-bg: #1e1e1e;
+    --bg-color: rgba(18, 18, 18, 0.7); /* Made transparent */
+    --card-bg: rgba(30, 30, 30, 0.7); /* Made transparent */
     --text-color: #e9ecef;
     --border-color: #2d2d2d;
 }
@@ -46,6 +46,66 @@ body {
     color: var(--text-color);
     background-color: var(--bg-color);
     overflow-x: hidden;
+    position: relative;
+}
+
+/* Gradient background effect for light theme */
+body {
+    background: 
+        var(--bg-color),
+        radial-gradient(at 0% 0%, rgba(67, 97, 238, 0.15) 0%, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(114, 9, 183, 0.1) 0%, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(247, 37, 133, 0.15) 0%, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(67, 97, 238, 0.1) 0%, transparent 50%);
+    background-attachment: fixed;
+}
+
+/* Stronger gradient effect for dark theme */
+body.dark-theme:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: 
+        radial-gradient(circle at 15% 15%, rgba(114, 9, 183, 0.9) 0%, transparent 35%),
+        radial-gradient(circle at 85% 25%, rgba(247, 37, 133, 0.8) 0%, transparent 40%),
+        radial-gradient(circle at 25% 85%, rgba(67, 97, 238, 0.9) 0%, transparent 35%),
+        radial-gradient(circle at 85% 85%, rgba(114, 9, 183, 0.8) 0%, transparent 40%);
+    opacity: 0.3; /* Significantly increased opacity */
+    filter: blur(40px); /* Reduced blur for more definition */
+    pointer-events: none;
+    animation: gradientAnimation 30s ease infinite;
+}
+
+/* Grid overlay using another pseudo-element */
+body.dark-theme:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%, 0% 0%, 100% 0%, 0% 100%, 100% 100%;
+    }
+    50% {
+        background-position: 0% 0%, 50% 50%, 150% 50%, 50% 150%, 150% 150%;
+    }
+    100% {
+        background-position: 0% 0%, 0% 0%, 100% 0%, 0% 100%, 100% 100%;
+    }
 }
 
 .container {
@@ -162,7 +222,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(18, 18, 18, 0.95);
+    background-color: rgba(18, 18, 18, 0.8); /* Reduced opacity */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     padding: 15px 0;
@@ -249,7 +309,7 @@ nav {
 .hero {
     padding-top: 150px;
     padding-bottom: 100px;
-    background: linear-gradient(135deg, var(--card-bg) 0%, var(--bg-color) 100%);
+    background: transparent; /* Removed background to let the gradient show through */
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -764,13 +824,16 @@ nav {
 }
 
 .skill-item {
-    background-color: var(--bg-color);
+    background-color: rgba(18, 18, 18, 0.6);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: var(--transition);
-    flex: 0 0 150px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(5px);
 }
 
 .skill-item:hover {
@@ -1128,7 +1191,7 @@ nav {
 .hobby-item {
     display: flex;
     align-items: center;
-    background-color: var(--card-bg);
+    background-color: rgba(30, 30, 30, 0.7);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
